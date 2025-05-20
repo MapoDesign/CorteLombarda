@@ -1,15 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import EventApp from "./Componets/Events";
-import { useState } from "react";
-import {
-  Calendar,
-  Clock,
-  MapPin,
-  ChevronRight,
-  ChevronLeft,
-  Search,
-} from "lucide-react";
 
 function App() {
   return (
