@@ -100,7 +100,8 @@ const eventsData = [
     description:
       "Un festival musicale con artisti locali e internazionali. Vieni a goderti una serata di musica sotto le stelle.",
     category: "musica",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
     id: 2,
@@ -111,7 +112,8 @@ const eventsData = [
     description:
       "Esposizione delle opere dei migliori artisti contemporanei italiani. Un'occasione unica per gli amanti dell'arte.",
     category: "arte",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://img.freepik.com/foto-gratuito/persone-che-partecipano-ad-una-mostra-d-arte_53876-14336.jpg",
   },
   {
     id: 3,
@@ -122,7 +124,8 @@ const eventsData = [
     description:
       "La maratona annuale attraverso le strade della capitale. Aperta a corridori di tutti i livelli.",
     category: "sport",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://img.freepik.com/foto-gratuito/donne-atletiche-felici-che-si-sostengono-a-vicenda-mentre-corrono-una-maratona-nella-natura_637285-6667.jpg",
   },
   {
     id: 4,
@@ -133,7 +136,8 @@ const eventsData = [
     description:
       "Esperti del settore tecnologico discuteranno le ultime innovazioni e il futuro della tecnologia.",
     category: "tecnologia",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://img.freepik.com/foto-gratuito/immagine-di-rawpixel-com_53876-165282.jpg",
   },
   {
     id: 5,
@@ -144,7 +148,8 @@ const eventsData = [
     description:
       "Proiezioni di film indipendenti da tutto il mondo con incontri con registi e attori.",
     category: "spettacolo",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://img.freepik.com/foto-gratuito/uomini-senza-volto-che-guardano-film-al-cinema_23-2147803849.jpg",
   },
 ];
 
@@ -152,8 +157,8 @@ const eventsData = [
 const EventCard = ({ event, onClick }) => {
   return (
     <div className="event-card" onClick={() => onClick(event)}>
-      <img src={event.image} alt={event.title} />
       <div className="event-card-content">
+        <img src={event.image} alt={event.title} className="event-image" />
         <h3>{event.title}</h3>
         <div className="event-info">
           <Calendar />
@@ -284,11 +289,6 @@ export default function EventApp() {
 
   return (
     <div className="container">
-      <header className="header">
-        <h1>EventiApp</h1>
-        <p>Scopri gli eventi più interessanti vicino a te</p>
-      </header>
-
       {selectedEvent ? (
         <EventDetail event={selectedEvent} onBack={handleBack} />
       ) : (
