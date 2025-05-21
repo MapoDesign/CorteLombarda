@@ -48,3 +48,19 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
+header h1, header h2, header h3, header h4, header h5, header h6 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background-color: #846378;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

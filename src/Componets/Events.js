@@ -339,6 +339,8 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
           className="search-input"
           onChange={(e) => onSearch(e.target.value)}
         />
+      </div>
+      <div>
         <Search />
       </div>
 

@@ -209,7 +209,7 @@ body {
   
   @media (min-width: 768px) {
     .event-filters {
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
