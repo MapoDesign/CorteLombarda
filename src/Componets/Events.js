@@ -93,63 +93,111 @@ const Search = () => (
 const eventsData = [
   {
     id: 1,
-    title: "Festival della Musica",
-    date: "2025-06-15",
-    time: "18:00",
-    location: "Piazza Maggiore, Bologna",
+    title: "Busto Vintage Festival",
+    date: "2025-05-17",
+    time: "11:00 - 20:00",
+    location: "In centro, Busto Arsizio",
     description:
-      "Un festival musicale con artisti locali e internazionali. Vieni a goderti una serata di musica sotto le stelle.",
-    category: "musica",
+      "Sabato 17 maggio, dalle 11.00 alle 20.00, il cuore della città si trasformerà in un incantevole Luna Park d’altri tempi: è in arrivo la prima edizione di Busto Vintage 2025, l’evento che celebra le tradizioni popolari attraverso giochi, sapori e atmosfere autentiche. Un’iniziativa dell’assessorato al Marketing, in collaborazione con il Distretto Commercio Busto Arsizio, per rendere la città viva e attrattiva per giovani e famiglie, un’opportunità di incontro all’insegna del divertimento sano, che permetterà ai bambini di staccarsi per qualche ora da cellulari e tablet, in una giornata, il sabato, in cui gli esercizi commerciali sono aperti e potranno beneficiare della presenza di persone che arriveranno anche da fuori città. Busto Vintage 2025 ( Prima Edizione) , format firmato Marchetti Eventi, porterà in centro città (piazze san Giovanni, Santa Maria e Vittorio Emanuele II e vie limitrofe): una selezione di giochi artigianali in legno: Tiro ai Barattoli, Lancio degli Anelli, Mini Golf, Water Pong, Pesca delle Paperelle, Cornhole e molti altri, realizzati in laboratori artigianali con materiali riciclati per un intrattenimento sostenibile e di qualità – la musica dal vivo, le performance dei Trampolieri, del Mago e del Mangiafuoco e la Ruota della Fortuna che regalerà tantissimi premi – il mercatino degli Hobbisti Vintage e lo street food – il Carosello, il Tiro a Segno Vintage e i tradizionali Carretti Pop Corn e Zucchero Filato Ingresso gratuito – tutte le attività (vedi programma nell’immagine) sono pensate per un pubblico dai 0 ai 100 anni, con aree dedicate ai più piccoli. Un’esperienza immersiva e responsabile: Busto Vintage è eco-friendly, grazie all’uso prevalente di legno e materiali di riciclo.",
+    category: ["festival", "food"],
+    image:
+      "https://www.bustoeventi.it/wp-content/uploads/2025/05/Busto-Vintage-e1746715174631.jpg",
+  },
+  {
+    id: 2,
+    title: "CENA BRASILIANA",
+    date: "2025-05-22",
+    time: "dinner",
+    location: "Loola, Milano",
+    description:
+      "Costo 20€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
+    category: ["food"],
+    image:
+      "https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 3,
+    title: "APERITIVO REVIVAL",
+    date: "2025-05-23",
+    time: "from 19:00",
+    location: "",
+    description:
+      "Costo 17€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
+    category: ["food", "music"],
     image:
       "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
-    id: 2,
-    title: "Mostra d'Arte Contemporanea",
-    date: "2025-06-20",
-    time: "10:00",
-    location: "Galleria Moderna, Milano",
-    description:
-      "Esposizione delle opere dei migliori artisti contemporanei italiani. Un'occasione unica per gli amanti dell'arte.",
-    category: "arte",
-    image:
-      "https://img.freepik.com/foto-gratuito/persone-che-partecipano-ad-una-mostra-d-arte_53876-14336.jpg",
-  },
-  {
-    id: 3,
-    title: "Maratona Cittadina",
-    date: "2025-07-05",
-    time: "08:30",
-    location: "Parco centrale, Roma",
-    description:
-      "La maratona annuale attraverso le strade della capitale. Aperta a corridori di tutti i livelli.",
-    category: "sport",
-    image:
-      "https://img.freepik.com/foto-gratuito/donne-atletiche-felici-che-si-sostengono-a-vicenda-mentre-corrono-una-maratona-nella-natura_637285-6667.jpg",
-  },
-  {
     id: 4,
-    title: "Conferenza sull'Innovazione",
-    date: "2025-07-12",
-    time: "14:00",
-    location: "Centro Congressi, Torino",
+    title: "APERITIVO E DISCOTECA",
+    date: "2025-05-24",
+    time: "from 19:00",
+    location: "Aria Club, Milano",
     description:
-      "Esperti del settore tecnologico discuteranno le ultime innovazioni e il futuro della tecnologia.",
-    category: "tecnologia",
+      "Costo 15€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
+    category: ["food", "music"],
     image:
-      "https://img.freepik.com/foto-gratuito/immagine-di-rawpixel-com_53876-165282.jpg",
+      "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
     id: 5,
-    title: "Festival del Cinema",
-    date: "2025-07-25",
-    time: "20:00",
-    location: "Cinema Aurora, Venezia",
+    title: "APERITIVO",
+    date: "2025-05-25",
+    time: "from 19:00",
+    location: "Just Cavalli, Milano",
+    map: "https://maps.app.goo.gl/tfuSStRj5KaBx8Rd9",
     description:
-      "Proiezioni di film indipendenti da tutto il mondo con incontri con registi e attori.",
-    category: "spettacolo",
+      "Costo 15€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
+    category: ["food", "music"],
     image:
-      "https://img.freepik.com/foto-gratuito/uomini-senza-volto-che-guardano-film-al-cinema_23-2147803849.jpg",
+      "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
+  },
+  {
+    id: 6,
+    title: "Lidl",
+    date: "",
+    time: "8:00 - 21:00",
+    location: "Via Magenta, 54, 21052 Busto Arsizio VA",
+    description:
+      "Supermercato discount con una vasta gamma di prodotti alimentari e non alimentari a prezzi competitivi.",
+    category: ["supermarket"],
+    image: "https://www.lidl.it/static/assets/Ricerca-Filiale-280060.jpg",
+  },
+  {
+    id: 7,
+    title: "Aldi",
+    date: "",
+    time: "8:30 - 20:30",
+    location: "Viale Giuseppe Borri, 46, 21052 Busto Arsizio VA",
+    description:
+      "Supermercato con una vasta gamma di prodotti alimentari e non alimentari.",
+    category: ["supermarket"],
+    image: "https://esgnews.com/wp-content/uploads/2024/03/Aldi-1024x682.jpg",
+  },
+  {
+    id: 8,
+    title: "MD",
+    date: "",
+    time: "8:30 - 20:30",
+    location: "Viale Boccaccio, 30, 21052 Busto Arsizio VA",
+    description:
+      "Supermercato discount con una vasta gamma di prodotti alimentari e non alimentari a prezzi competitivi.",
+    category: ["supermarket"],
+    image:
+      "https://www.mdspa.it/wp-content/uploads/Schermata-2022-08-10-alle-16.17.52-1-1024x385.png",
+  },
+  {
+    id: 9,
+    title: "Abbonamento Musei Lombardia",
+    date: "",
+    time: "Orari di apertura variabili",
+    location: "Tutta la Lombardia",
+    description:
+      "Abbonamento che consente l'accesso illimitato a 255 musei e luoghi d'arte in Lombardia.",
+    site: "https://www.abbonamentomusei.it/",
+    category: ["art", "exhibition"],
+    image:
+      "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
   },
 ];
 
@@ -162,7 +210,12 @@ const EventCard = ({ event, onClick }) => {
         <h3>{event.title}</h3>
         <div className="event-info">
           <Calendar />
-          <span>{new Date(event.date).toLocaleDateString("it-IT")}</span>
+          <span>
+            {" "}
+            {event.date
+              ? new Date(event.date).toLocaleDateString("it-IT")
+              : "Tutti i giorni"}
+          </span>
         </div>
         <div className="event-info">
           <Clock />
@@ -174,7 +227,15 @@ const EventCard = ({ event, onClick }) => {
         </div>
       </div>
       <div className="event-card-footer">
-        <span className="event-category">{event.category}</span>
+        {Array.isArray(event.category) ? (
+          event.category.map((cat, index) => (
+            <div key={index} className="event-category">
+              {cat}
+            </div>
+          ))
+        ) : (
+          <div className="event-category">{event.category}</div>
+        )}
       </div>
     </div>
   );
@@ -213,9 +274,42 @@ const EventDetail = ({ event, onBack }) => {
           className="event-category-container"
           style={{ marginBottom: "24px" }}
         >
-          <span className="event-category">{event.category}</span>
+          <span className="event-category">
+            {Array.isArray(event.category) ? (
+              event.category.map((cat, index) => (
+                <div key={index} className="event-category">
+                  {cat}
+                </div>
+              ))
+            ) : (
+              <div className="event-category">{event.category}</div>
+            )}
+          </span>
         </div>
-        <button className="book-button">Prenota ora</button>
+        {event.site ? (
+          <a
+            href={event.site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="book-button"
+          >
+            Vai al sito
+          </a>
+        ) : (
+          ""
+        )}
+        {event.map ? (
+          <a
+            href={event.map}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="book-button"
+          >
+            Visualizza sulla mappa
+          </a>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
@@ -224,12 +318,16 @@ const EventDetail = ({ event, onBack }) => {
 // Componente filtro eventi
 const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
   const categories = [
-    "tutti",
-    "musica",
-    "arte",
+    "all",
+    "music",
+    "art",
     "sport",
-    "tecnologia",
-    "spettacolo",
+    "technology",
+    "theater",
+    "exhibition",
+    "festival",
+    "food",
+    "supermarket",
   ];
 
   return (
@@ -265,7 +363,7 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
 export default function EventApp() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("tutti");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const filteredEvents = eventsData.filter((event) => {
     const matchesSearch =
@@ -273,7 +371,10 @@ export default function EventApp() {
       event.description.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory =
-      selectedCategory === "tutti" || event.category === selectedCategory;
+      selectedCategory === "all" || // Mostra tutti gli eventi se la categoria è "all"
+      (Array.isArray(event.category)
+        ? event.category.includes(selectedCategory) // Controlla se la categoria è inclusa
+        : event.category === selectedCategory);
 
     return matchesSearch && matchesCategory;
   });
@@ -311,9 +412,7 @@ export default function EventApp() {
             </div>
           ) : (
             <div className="no-events">
-              <p>
-                Nessun evento trovato. Prova a modificare i filtri di ricerca.
-              </p>
+              <p>Cooming Soon.</p>
             </div>
           )}
         </>
