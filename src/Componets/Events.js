@@ -99,10 +99,10 @@ const eventsData = [
     location: "Fiera Milano Rho",
     description:
       "Artigiano in Fiera Summer è un evento dedicato all'artigianato e alla creatività, che si svolge presso la Fiera Milano Rho. Durante l'evento, i visitatori possono scoprire e acquistare prodotti artigianali provenienti da diverse regioni italiane e da tutto il mondo. L'evento offre anche laboratori, dimostrazioni e spettacoli dal vivo.",
-    site: "artigianoinfiera.it/?form=check_email&utm_source=newsletter&utm_medium=email&utm_campaign=curiosita_ade25",
+    site: "https://artigianoinfiera.it/?form=check_email&utm_source=newsletter&utm_medium=email&utm_campaign=curiosita_ade25",
     category: ["food", "shopping", "gifts"],
     image:
-      "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
+      "https://saloni.artigianoinfiera.it/storage/img/crops/ab388a4f-664e-4c1d-b1c8-7c49531914b2/hero-af-estate25-dsk__773d2663726f703d253243253243253243.jpg",
   },
   {
     id: 9,
