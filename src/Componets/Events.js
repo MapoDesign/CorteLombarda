@@ -92,6 +92,19 @@ const Search = () => (
 // Dati di esempio per gli eventi
 const eventsData = [
   {
+    id: 11,
+    title: "Artigiano in Fiera SUMMER",
+    date: "29-05-2025",
+    time: "10:00 - 22:30",
+    location: "Fiera Milano Rho",
+    description:
+      "Artigiano in Fiera Summer è un evento dedicato all'artigianato e alla creatività, che si svolge presso la Fiera Milano Rho. Durante l'evento, i visitatori possono scoprire e acquistare prodotti artigianali provenienti da diverse regioni italiane e da tutto il mondo. L'evento offre anche laboratori, dimostrazioni e spettacoli dal vivo.",
+    site: "artigianoinfiera.it/?form=check_email&utm_source=newsletter&utm_medium=email&utm_campaign=curiosita_ade25",
+    category: ["food", "shopping", "gifts"],
+    image:
+      "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
+  },
+  {
     id: 9,
     title: "Abbonamento Musei Lombardia",
     date: "",
@@ -173,7 +186,7 @@ const eventsData = [
     location: "Just Cavalli, Milano",
     map: "https://maps.app.goo.gl/tfuSStRj5KaBx8Rd9",
     description:
-      "Costo 15€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
+      "Costo 10€ Per info e prenotazioni: +39 375 505 8482 Melissa. Lista Energy https://www.facebook.com/groups/listaenergymilano/ ",
     category: ["food", "music"],
     image:
       "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
@@ -343,6 +356,8 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
     "supermarket",
     "wellness",
     "nature",
+    "shopping",
+    "gifts",
   ];
 
   return (
