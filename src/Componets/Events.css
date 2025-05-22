@@ -286,3 +286,41 @@ body {
     color: #6b7280;
     font-size: 1.125rem;
   }
+
+  .polls-section {
+  margin-bottom: 32px;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, #e3f0ff 0%, #b3d8ff 100%);
+  box-shadow: 0 4px 16px rgba(50, 100, 200, 0.07);
+  position: sticky;
+  top: 0; /* distanza dal bordo superiore */
+  z-index: 10;
+}
+
+.polls-section h2 {
+  margin-bottom: 18px;
+  color: #2257a7;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.poll-link {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2257a7 !important;
+  color: #fff !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(34, 87, 167, 0.08);
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+
+.poll-link:hover,
+.poll-link:focus {
+  background: #174077;
+  color: #fff;
+}

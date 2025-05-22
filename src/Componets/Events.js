@@ -93,6 +93,20 @@ const Search = () => (
 const eventsData = [
   {
     id: 12,
+    title: "Pizza La Cerasella - 10% di sconto",
+    date: "",
+    dateEnd: "",
+    time: "Orari di apertura variabili",
+    location: "Viale Luigi Cadorna, 27, 21052 Busto Arsizio VA",
+    description:
+      "Cerasella è un ristorante e pizzeria situato a Busto Arsizio, noto per la sua cucina tradizionale italiana e le sue pizze cotte nel forno a legna. Il locale offre un'atmosfera accogliente e un servizio cordiale, rendendolo un luogo ideale per pranzi e cene in famiglia o con amici. Il menu include una varietà di piatti, dalle specialità di carne e pesce a una selezione di antipasti e dolci fatti in casa. Cerasella è anche conosciuta per le sue serate a tema e eventi speciali, che la rendono un punto di riferimento per la ristorazione nella zona. Convenzione del 10% per gli ospiti, portando il volantino.",
+    category: ["food", "partnerships"],
+    site: "https://lacerasella.com/",
+    image:
+      "https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 12,
     title: "Gita in Barca a vela",
     date: "",
     dateEnd: "",
@@ -119,7 +133,7 @@ const eventsData = [
       "https://saloni.artigianoinfiera.it/storage/img/crops/ab388a4f-664e-4c1d-b1c8-7c49531914b2/hero-af-estate25-dsk__773d2663726f703d253243253243253243.jpg",
   },
   {
-    id: 9,
+    id: 10,
     title: "Abbonamento Musei Lombardia",
     date: "",
     time: "Orari di apertura variabili",
@@ -132,7 +146,7 @@ const eventsData = [
       "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
   },
   {
-    id: 10,
+    id: 9,
     title: "Forest Bathing Experience",
     date: "",
     time: "Orari di apertura variabili",
@@ -145,19 +159,19 @@ const eventsData = [
       "https://images.pexels.com/photos/8534441/pexels-photo-8534441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
-    id: 1,
+    id: 8,
     title: "Busto Vintage Festival",
     date: "2025-05-17",
     time: "11:00 - 20:00",
     location: "In centro, Busto Arsizio",
     description:
       "Sabato 17 maggio, dalle 11.00 alle 20.00, il cuore della città si trasformerà in un incantevole Luna Park d’altri tempi: è in arrivo la prima edizione di Busto Vintage 2025, l’evento che celebra le tradizioni popolari attraverso giochi, sapori e atmosfere autentiche. Un’iniziativa dell’assessorato al Marketing, in collaborazione con il Distretto Commercio Busto Arsizio, per rendere la città viva e attrattiva per giovani e famiglie, un’opportunità di incontro all’insegna del divertimento sano, che permetterà ai bambini di staccarsi per qualche ora da cellulari e tablet, in una giornata, il sabato, in cui gli esercizi commerciali sono aperti e potranno beneficiare della presenza di persone che arriveranno anche da fuori città. Busto Vintage 2025 ( Prima Edizione) , format firmato Marchetti Eventi, porterà in centro città (piazze san Giovanni, Santa Maria e Vittorio Emanuele II e vie limitrofe): una selezione di giochi artigianali in legno: Tiro ai Barattoli, Lancio degli Anelli, Mini Golf, Water Pong, Pesca delle Paperelle, Cornhole e molti altri, realizzati in laboratori artigianali con materiali riciclati per un intrattenimento sostenibile e di qualità – la musica dal vivo, le performance dei Trampolieri, del Mago e del Mangiafuoco e la Ruota della Fortuna che regalerà tantissimi premi – il mercatino degli Hobbisti Vintage e lo street food – il Carosello, il Tiro a Segno Vintage e i tradizionali Carretti Pop Corn e Zucchero Filato Ingresso gratuito – tutte le attività (vedi programma nell’immagine) sono pensate per un pubblico dai 0 ai 100 anni, con aree dedicate ai più piccoli. Un’esperienza immersiva e responsabile: Busto Vintage è eco-friendly, grazie all’uso prevalente di legno e materiali di riciclo.",
-    category: ["festival", "food"],
+    category: ["food"],
     image:
       "https://www.bustoeventi.it/wp-content/uploads/2025/05/Busto-Vintage-e1746715174631.jpg",
   },
   {
-    id: 2,
+    id: 7,
     title: "CENA BRASILIANA",
     date: "2025-05-22",
     time: "dinner",
@@ -169,7 +183,7 @@ const eventsData = [
       "https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    id: 3,
+    id: 6,
     title: "APERITIVO REVIVAL",
     date: "2025-05-23",
     time: "from 19:00",
@@ -181,7 +195,7 @@ const eventsData = [
       "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
-    id: 4,
+    id: 5,
     title: "APERITIVO E DISCOTECA",
     date: "2025-05-24",
     time: "from 19:00",
@@ -193,7 +207,7 @@ const eventsData = [
       "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
-    id: 5,
+    id: 4,
     title: "APERITIVO",
     date: "2025-05-25",
     time: "from 19:00",
@@ -206,7 +220,7 @@ const eventsData = [
       "https://img.freepik.com/foto-gratuito/gruppi-di-giovani-diversi-che-si-uniscono-e-si-godono-il-tempo-insieme-in-un-estetica-da-sogno_23-2151664436.jpg",
   },
   {
-    id: 6,
+    id: 3,
     title: "Lidl",
     date: "",
     time: "8:00 - 21:00",
@@ -214,21 +228,11 @@ const eventsData = [
     description:
       "Supermercato discount con una vasta gamma di prodotti alimentari e non alimentari a prezzi competitivi.",
     category: ["supermarket"],
+    map: "https://maps.app.goo.gl/ZKwzo9j4ZZUJ7fsD8",
     image: "https://www.lidl.it/static/assets/Ricerca-Filiale-280060.jpg",
   },
   {
-    id: 7,
-    title: "Aldi",
-    date: "",
-    time: "8:30 - 20:30",
-    location: "Viale Giuseppe Borri, 46, 21052 Busto Arsizio VA",
-    description:
-      "Supermercato con una vasta gamma di prodotti alimentari e non alimentari.",
-    category: ["supermarket"],
-    image: "https://esgnews.com/wp-content/uploads/2024/03/Aldi-1024x682.jpg",
-  },
-  {
-    id: 8,
+    id: 2,
     title: "MD",
     date: "",
     time: "8:30 - 20:30",
@@ -236,8 +240,22 @@ const eventsData = [
     description:
       "Supermercato discount con una vasta gamma di prodotti alimentari e non alimentari a prezzi competitivi.",
     category: ["supermarket"],
+    map: "https://maps.app.goo.gl/effwVsiqbuzphjbg7",
     image:
       "https://www.mdspa.it/wp-content/uploads/Schermata-2022-08-10-alle-16.17.52-1-1024x385.png",
+  },
+  {
+    id: 1,
+    title: "Esselunga",
+    date: "",
+    time: "8:00 - 20:00",
+    location: "ang. Via Piemonte, Viale Giuseppe Borri, 21053 Castellanza VA",
+    description:
+      "Supermercato con una vasta gamma di prodotti alimentari e non alimentari, con un'attenzione particolare alla qualità.",
+    category: ["supermarket"],
+    map: "https://maps.app.goo.gl/44vL6qzJJXkbCTQf6",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.bQ6nKUfLlhq4GN1cH-y30gHaFP&pid=Api",
   },
 ];
 
@@ -376,7 +394,7 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
     "technology",
     "theater",
     "experience",
-    "festival",
+    "partnerships",
     "food",
     "supermarket",
     "wellness",
@@ -416,6 +434,35 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
   );
 };
 
+const PollsSection = () => {
+  // Sostituisci questi con i tuoi link reali
+  const polls = [
+    {
+      id: 1,
+      title: "Partecipa al sondaggio universitario sul volontariato",
+      url: "ttps://shorturl.at/HIgFZ",
+    },
+  ];
+
+  return (
+    <div className="polls-section" style={{ marginBottom: 32 }}>
+      <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+        {polls.map((poll) => (
+          <a
+            key={poll.id}
+            href={poll.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="poll-link"
+          >
+            {poll.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 // App principale
 export default function EventApp() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -433,7 +480,26 @@ export default function EventApp() {
         ? event.category.includes(selectedCategory) // Controlla se la categoria è inclusa
         : event.category === selectedCategory);
 
-    return matchesSearch && matchesCategory;
+    // Nascondi eventi passati da più di 3 giorni (solo se hanno una data)
+    const today = new Date();
+    let isFutureOrRecent = true;
+    if (event.date) {
+      const eventDate = new Date(event.date);
+      // Calcola la differenza in giorni
+      const diffTime = today - eventDate;
+      const diffDays = diffTime / (1000 * 60 * 60 * 24);
+      isFutureOrRecent = diffDays <= 3;
+    }
+
+    return matchesSearch && matchesCategory && isFutureOrRecent;
+  });
+
+  // Ordina per data (eventi senza data vanno in fondo)
+  const sortedEvents = [...filteredEvents].sort((a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(a.date) - new Date(b.date);
   });
 
   const handleSelectEvent = (event) => {
@@ -447,6 +513,7 @@ export default function EventApp() {
 
   return (
     <div className="container">
+      <PollsSection />
       {selectedEvent ? (
         <EventDetail event={selectedEvent} onBack={handleBack} />
       ) : (
@@ -459,7 +526,7 @@ export default function EventApp() {
 
           {filteredEvents.length > 0 ? (
             <div className="events-grid">
-              {filteredEvents.map((event) => (
+              {sortedEvents.map((event) => (
                 <EventCard
                   key={event.id}
                   event={event}
