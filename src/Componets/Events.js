@@ -92,9 +92,23 @@ const Search = () => (
 // Dati di esempio per gli eventi
 const eventsData = [
   {
+    id: 12,
+    title: "Gita in Barca a vela",
+    date: "",
+    dateEnd: "",
+    time: "Tutto il giorno",
+    location: "Lago Maggiore",
+    description:
+      "Un'esperienza unica per esplorare le bellezze del Lago Maggiore in barca.",
+    category: ["nature", "experience"],
+    image:
+      "https://images.pexels.com/photos/996328/pexels-photo-996328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
     id: 11,
     title: "Artigiano in Fiera SUMMER",
-    date: "29-05-2025",
+    date: "2025-05-29",
+    dateEnd: "2025-06-02",
     time: "10:00 - 22:30",
     location: "Fiera Milano Rho",
     description:
@@ -125,7 +139,7 @@ const eventsData = [
     location: "Gita fuori porta nella natura",
     description:
       "Un'esperienza di benessere immersi nella natura, per ritrovare la connessione tra mente e corpo. Contatti: +39 347 2249986.",
-    category: ["wellness", "nature"],
+    category: ["wellness", "nature", "experience", "sport"],
     site: "https://www.facebook.com/sabbatino.giuseppe",
     image:
       "https://images.pexels.com/photos/8534441/pexels-photo-8534441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -237,9 +251,12 @@ const EventCard = ({ event, onClick }) => {
         <div className="event-info">
           <Calendar />
           <span>
-            {" "}
             {event.date
-              ? new Date(event.date).toLocaleDateString("it-IT")
+              ? event.dateEnd
+                ? `${new Date(event.date).toLocaleDateString(
+                    "it-IT"
+                  )} - ${new Date(event.dateEnd).toLocaleDateString("it-IT")}`
+                : new Date(event.date).toLocaleDateString("it-IT")
               : "Tutti i giorni"}
           </span>
         </div>
@@ -281,7 +298,15 @@ const EventDetail = ({ event, onBack }) => {
         <div className="event-meta">
           <div className="event-meta-item">
             <Calendar />
-            <span>{new Date(event.date).toLocaleDateString("it-IT")}</span>
+            <span>
+              {event.date
+                ? event.dateEnd
+                  ? `${new Date(event.date).toLocaleDateString(
+                      "it-IT"
+                    )} - ${new Date(event.dateEnd).toLocaleDateString("it-IT")}`
+                  : new Date(event.date).toLocaleDateString("it-IT")
+                : "Tutti i giorni"}
+            </span>
           </div>
           <div className="event-meta-item">
             <Clock />
@@ -350,7 +375,7 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
     "sport",
     "technology",
     "theater",
-    "exhibition",
+    "experience",
     "festival",
     "food",
     "supermarket",
