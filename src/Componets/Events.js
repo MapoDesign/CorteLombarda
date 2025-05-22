@@ -92,6 +92,32 @@ const Search = () => (
 // Dati di esempio per gli eventi
 const eventsData = [
   {
+    id: 9,
+    title: "Abbonamento Musei Lombardia",
+    date: "",
+    time: "Orari di apertura variabili",
+    location: "Tutta la Lombardia",
+    description:
+      "Abbonamento che consente l'accesso illimitato a 255 musei e luoghi d'arte in Lombardia.",
+    site: "https://www.abbonamentomusei.it/",
+    category: ["art", "exhibition"],
+    image:
+      "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
+  },
+  {
+    id: 10,
+    title: "Forest Bathing Experience",
+    date: "",
+    time: "Orari di apertura variabili",
+    location: "Gita fuori porta nella natura",
+    description:
+      "Un'esperienza di benessere immersi nella natura, per ritrovare la connessione tra mente e corpo. Contatti: +39 347 2249986.",
+    category: ["wellness", "nature"],
+    site: "https://www.facebook.com/sabbatino.giuseppe",
+    image:
+      "https://images.pexels.com/photos/8534441/pexels-photo-8534441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
     id: 1,
     title: "Busto Vintage Festival",
     date: "2025-05-17",
@@ -185,19 +211,6 @@ const eventsData = [
     category: ["supermarket"],
     image:
       "https://www.mdspa.it/wp-content/uploads/Schermata-2022-08-10-alle-16.17.52-1-1024x385.png",
-  },
-  {
-    id: 9,
-    title: "Abbonamento Musei Lombardia",
-    date: "",
-    time: "Orari di apertura variabili",
-    location: "Tutta la Lombardia",
-    description:
-      "Abbonamento che consente l'accesso illimitato a 255 musei e luoghi d'arte in Lombardia.",
-    site: "https://www.abbonamentomusei.it/",
-    category: ["art", "exhibition"],
-    image:
-      "https://www.regione.lombardia.it/wps/wcm/connect/50f2c011-130b-42e4-8170-c9faf6f9acca/abbonamento+1200x600.jpg?MOD=AJPERES",
   },
 ];
 
@@ -328,6 +341,8 @@ const EventFilter = ({ onSearch, onCategoryChange, activeCategory }) => {
     "festival",
     "food",
     "supermarket",
+    "wellness",
+    "nature",
   ];
 
   return (
