@@ -92,7 +92,59 @@ const Search = () => (
 // Dati di esempio per gli eventi
 const eventsData = [
   {
-    id: 12,
+    id: 16,
+    title: "Il Duetto",
+    date: "",
+    dateEnd: "",
+    time: "16 - 24",
+    location: "Via Solferino, 3, 21052 Busto Arsizio VA",
+    description: "Aperitivo a buffet in centro 15€ due drinks inclusi.",
+    category: ["food"],
+    image:
+      "https://images.pexels.com/photos/169391/pexels-photo-169391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 16,
+    title: "Trattoria Caprese",
+    date: "",
+    dateEnd: "",
+    time: "12 - 15 / 19 - 24",
+    location: "Via Solferino, 3, 21052 Busto Arsizio VA",
+    description:
+      "Trattoria Caprese è un ristorante che offre piatti tipici della cucina campana, con un'attenzione particolare alla freschezza degli ingredienti e alla tradizione culinaria.",
+    category: ["food"],
+    image:
+      "https://images.pexels.com/photos/5086619/pexels-photo-5086619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 15,
+    title: "Osteria Dul Tarlisu Busto Arsizio",
+    date: "",
+    dateEnd: "",
+    time: "12:30 - 14 / 19:30 - 22 Domenica solo a pranzo, lunedì chiuso",
+    location: "Via Ugo Foscolo, 2, 21052 Busto Arsizio VA",
+    description:
+      "Piatti lombardi serviti in una cornice rétro tra credenze di legno, bottiglie e oggetti di rame alle pareti.",
+    category: ["food"],
+    image:
+      "https://images.pexels.com/photos/5086619/pexels-photo-5086619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 14,
+    title: "Pizzum",
+    date: "",
+    dateEnd: "",
+    time: "12:00 - 15:00, 19:00 - 23:00",
+    location: "Via Ugo Foscolo 4, 21052 Busto Arsizio VA",
+    description:
+      "PIZZIUM propone la pizza secondo la tradizione napoletana e porta in viaggio i suoi clienti tra i sapori dell’Italia grazie alle sue pizze regionali realizzate con ingredienti DOP e IGP locali di alta qualità.",
+    category: ["food"],
+    site: "https://pizzium.com/",
+    image:
+      "https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 13,
     title: "Pizza La Cerasella - 10% di sconto",
     date: "",
     dateEnd: "",
