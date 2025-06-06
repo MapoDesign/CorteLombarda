@@ -92,7 +92,7 @@ const Search = () => (
 // Dati di esempio per gli eventi
 const eventsData = [
   {
-    id: 16,
+    id: 17,
     title: "Il Duetto",
     date: "",
     dateEnd: "",
