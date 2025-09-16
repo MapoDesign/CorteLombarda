@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Events.css";
 
 // Componenti icone personalizzati (poiché lucide-react potrebbe non essere installato)
@@ -90,7 +90,7 @@ const Search = () => (
 );
 
 // Dati di esempio per gli eventi
-const eventsData = [
+const eventsDataLocal = [
   {
     id: 17,
     title: "Il Duetto",
@@ -515,16 +515,65 @@ const PollsSection = () => {
   );
 };
 
+// Funzione per chiamare l'API
+const fetchEventsFromAPI = async () => {
+  try {
+    const response = await fetch(
+      "https://rubricatelefonica-node-mongo-vue.onrender.com/api/events"
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Errore nel fetch degli eventi:", error);
+    throw error;
+  }
+};
+
 // App principale
 export default function EventApp() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
+  // Nuovi stati per gestire API
+  const [eventsData, setEventsData] = useState(eventsDataLocal); // Inizializza con dati locali
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Effetto per caricare i dati all'avvio
+  useEffect(() => {
+    const loadEvents = async () => {
+      try {
+        setLoading(true);
+        const apiEvents = await fetchEventsFromAPI();
+
+        // Combina eventi locali con quelli da API
+        setEventsData([...eventsDataLocal, ...apiEvents]);
+
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        // In caso di errore, usa i dati locali come fallback
+        setEventsData(eventsDataLocal);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEvents();
+  }, []);
+
   const filteredEvents = eventsData.filter((event) => {
+    // Controlli di sicurezza per evitare errori con campi undefined
+    const title = event.title || "";
+    const description = event.description || "";
+
     const matchesSearch =
-      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchQuery.toLowerCase());
+      title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      description.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory =
       selectedCategory === "all" || // Mostra tutti gli eventi se la categoria è "all"
@@ -563,8 +612,23 @@ export default function EventApp() {
     setSelectedEvent(null);
   };
 
+  // Gestione stati di loading ed errore
+  if (loading) {
+    return (
+      <div className="container">
+        <div className="loading">Caricamento eventi...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
+      {error && (
+        <div className="error">
+          <p>Errore nel caricamento API: {error}</p>
+          <p>Mostrando eventi locali.</p>
+        </div>
+      )}
       <PollsSection />
       {selectedEvent ? (
         <EventDetail event={selectedEvent} onBack={handleBack} />
@@ -588,7 +652,7 @@ export default function EventApp() {
             </div>
           ) : (
             <div className="no-events">
-              <p>Cooming Soon.</p>
+              <p>Coming Soon.</p>
             </div>
           )}
         </>
